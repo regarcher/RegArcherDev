@@ -1,0 +1,15 @@
+<apex:page StandardController="Account"  extensions="Controller_AccountCustom"> 
+<apex:form >
+<apex:commandButton action="{!save}" value="save" id="theButton"/>
+<apex:commandButton action="{!sendEmail}" value="Send Email" id="emailButton"/>
+<apex:pageBlock title="Welcome {!$User.FirstName}">
+You are viewing {!Account.name}
+</apex:pageBlock>
+<apex:pageBlock id="accountContacts" title="Contacts">
+    <apex:pageBlockTable id="accountcontactsPBT" value="{!Account.contacts}" var="contact">
+        <apex:column value="{!contact.name}"/>
+        <apex:column value="{!contact.phone}"/>
+    </apex:pageBlockTable>
+</apex:pageBlock>
+</apex:form>
+</apex:page>
