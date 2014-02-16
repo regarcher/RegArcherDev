@@ -18,7 +18,7 @@ public pagereference sendEmail(){
     Messaging.SingleEmailMessage email = new  Messaging.SingleEmailMessage();
     email.setSubject('Hello World');
     email.setHtmlBody('<html><body><h1>Hello World!</h1></body></html>');
-    String[] emailAddresses = new String[]{'reg_archer@yahoo.com'};
+    String[] emailAddresses = new String[]{'adagdak@gmail.com'}; 
     email.setToAddresses(emailAddresses);
     Messaging.SingleEmailMessage[] arryMsg = new Messaging.SingleEmailMessage[]{email};
     Messaging.SendEmailResult[] mailResults = Messaging.sendEmail(arryMsg);
